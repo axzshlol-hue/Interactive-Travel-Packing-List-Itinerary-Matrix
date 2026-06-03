@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMAD_MATRIX // Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <h1>NOMAD_MATRIX //</h1>
+            <p>Smart Travel Packing List & Itinerary Engine</p>
+        </header>
+
+        <section class="config-panel">
+            <h2>1. TRIP CONFIGURATION</h2>
+            <div class="input-grid">
+                <div class="input-field">
+                    <label>Trip Category</label>
+                    <select id="trip-category">
+                        <option value="beach">🏖️ Beach Vacation</option>
+                        <option value="cold">🏔️ Cold Weather / Ski</option>
+                        <option value="adventure">🥾 Adventure / Hiking</option>
+                        <option value="business">💼 Business Trip</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label>Duration (Days)</label>
+                    <input type="number" id="trip-days" value="4" min="1" max="30">
+                </div>
+                <button id="generate-btn">GENERATE MATRIX</button>
+            </div>
+        </section>
+
+        <div class="tab-menu">
+            <button class="tab-btn active" data-tab="packing">PACKING CHECKLIST</button>
+            <button class="tab-btn" data-tab="itinerary">ITINERARY MATRIX</button>
+        </div>
+
+        <div id="tab-packing" class="tab-content active">
+            <div class="progress-section">
+                <div class="progress-text">PACKING PROGRESS: <span id="progress-percent">0%</span></div>
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+            </div>
+            
+            <div class="list-wrapper">
+                <h3>GENERATED ESSENTIALS</h3>
+                <ul id="packing-list">
+                    </ul>
+            </div>
+        </div>
+
+        <div id="tab-itinerary" class="tab-content">
+            <div class="itinerary-builder">
+                <h3>DAILY SCHEDULE MATRIX</h3>
+                <div id="itinerary-days-container">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
