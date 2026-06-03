@@ -14,7 +14,7 @@ let checkedItemsCount = 0;
 // Element Selectors
 const categorySelect = document.getElementById('trip-category');
 const daysInput = document.getElementById('trip-days');
-const generateBtn = document.getElementById('generate-btn');
+const generateBtn = document.getElementById('generate-matrix-btn');
 const packingList = document.getElementById('packing-list');
 const progressFill = document.getElementById('progress-fill');
 const progressPercent = document.getElementById('progress-percent');
